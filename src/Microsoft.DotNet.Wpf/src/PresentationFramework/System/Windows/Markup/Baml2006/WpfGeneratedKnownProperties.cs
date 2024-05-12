@@ -10,7 +10,7 @@ namespace System.Windows.Baml2006
 {
     partial class WpfSharedBamlSchemaContext: XamlSchemaContext
     {
-        const int KnownPropertyCount = 270;
+        const int KnownPropertyCount = 272;
 
 
         private WpfKnownMember CreateKnownMember(short bamlNumber)
@@ -286,6 +286,8 @@ namespace System.Windows.Baml2006
                 case 268: return Create_BamlProperty_XmlDataProvider_XmlSerializer();
                 case 269: return Create_BamlProperty_TextBox_IsReadOnly();
                 case 270: return Create_BamlProperty_RichTextBox_IsReadOnly();
+                case 271: return Create_BamlProperty_Setter_Content();
+                case 272: return Create_BamlProperty_Setter_Value();
                 default:
                     throw new InvalidOperationException("Invalid BAML number");
             }
@@ -2467,6 +2469,24 @@ namespace System.Windows.Baml2006
                             false, // IsReadOnly
                             false // IsAttachable
                                      );
+            bamlMember.Freeze();
+            return bamlMember;
+        }
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+        private WpfKnownMember Create_BamlProperty_Setter_Content()
+        {
+            Type type = typeof(System.Windows.Setter);
+
+            var bamlMember = new WpfKnownMember( this,  // Schema Context
+                            this.GetXamlType(typeof(System.Windows.Setter)), // DeclaringType
+                            "Content", // Name
+                            typeof(System.Windows.DependencyProperty), // type
+                            false, // IsReadOnly
+                            false // IsAttachable
+                            );
+
+            bamlMember.TypeConverterType = typeof(System.Windows.Setter);
             bamlMember.Freeze();
             return bamlMember;
         }
