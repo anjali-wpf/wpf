@@ -1,0 +1,23 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <Style TargetType="TextBlock" >
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+    <System:Double x:Key="ControlContentThemeFontSize">14</System:Double>
+    <System:Double x:Key="ContentControlFontSize">14</System:Double>
+    <System:Double x:Key="TextControlThemeMinHeight">24</System:Double>
+    <Thickness x:Key="TextControlThemePadding">2,2,6,1</Thickness>
+    <System:Double x:Key="ListViewItemMinHeight">32</System:Double>
+    <System:Double x:Key="TreeViewItemMinHeight">24</System:Double>
+    <System:Double x:Key="TreeViewItemMultiSelectCheckBoxMinHeight">24</System:Double>
+    <System:Double x:Key="TreeViewItemPresenterMargin">0</System:Double>
+    <System:Double x:Key="TreeViewItemPresenterPadding">0</System:Double>
+    <Thickness x:Key="TimePickerHostPadding">0,1,0,2</Thickness>
+    <Thickness x:Key="DatePickerHostPadding">0,1,0,2</Thickness>
+    <Thickness x:Key="DatePickerHostMonthPadding">9,0,0,1</Thickness>
+    <Thickness x:Key="ComboBoxEditableTextPadding">10,0,30,0</Thickness>
+    <System:Double x:Key="ComboBoxMinHeight">24</System:Double>
+    <Thickness x:Key="ComboBoxPadding">12,1,0,3</Thickness>
+    <System:Double x:Key="NavigationViewItemOnLeftMinHeight">32</System:Double>
+</ResourceDictionary>
